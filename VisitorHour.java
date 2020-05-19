@@ -103,18 +103,13 @@ public class VisitorHour extends Configured implements Tool {
 				String[] data = line.split(",");
 				Long v = Long.valueOf(data[0]);
 				if (v < 0) {
-//					if (!visitorsDelayed.contains(data[1])) {
-//						visitorsDelayed.add(data[1]);
+
 						delayCounter++;
 						averageDelay += v;
-//					}
 				}
 				else if(v > 0 ){
-//					if (!visitorsOnTime.contains(data[1])) {
-//						visitorsOnTime.add(data[1]);
 						ontimeCounter++;
                     averageAheadTime+=v;
-//					}
 				}
 				counter++;
 			}
